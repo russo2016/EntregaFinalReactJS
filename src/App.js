@@ -7,7 +7,7 @@ function App(){
   return(
     <div>
       <NavBar/>
-      <ItemListContainer greeting={"Espero que le guste!"}/>
+      <ItemListContainer msj={"Espero que le guste!"}/>
     </div>
   )
 }
