@@ -1,10 +1,31 @@
-const ItemListContainer = ({msj}) =>{
+import { useEffect, useState } from "react"
+import { getProducts, getProductsByCategory } from "../../products";
+import ItemList from "../ItemList/ItemList";
+import "./ItemListContainer.css"
+import { useParams } from "react-router-dom";
+
+const ItemListContainer = () =>{
+
+    const [products, setProducts] = useState([]);
+
+    const {categoryId} = useParams();
+
+    useEffect(()=>{
+        const asyncFunc = categoryId ? getProductsByCategory : getProducts
+
+        asyncFunc(categoryId)
+            .then(response =>{
+                setProducts(response)
+            })
+            .catch(error=>{
+                console.error(error)
+            })
+    },[categoryId])
+
     return(
-        <div className="has-text-centered">
-            <h1 className="is-size-4 has-text-weight-semibold">{msj}</h1>
-        </div>
+        <ItemList products={products}/>
     )
 }
 
 
-export default ItemListContainer
+export default ItemListContainer;
