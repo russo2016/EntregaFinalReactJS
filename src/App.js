@@ -7,7 +7,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App(){
   return(
-    <div>
       <BrowserRouter>
         <NavBar/>
       <Routes>
@@ -15,10 +14,8 @@ function App(){
         <Route path="/category/:categoryId" element={<ItemListContainer/>} />
         <Route path="/item/:itemId" element={<ItemDetailContainer/>} />
         <Route path="*" element={<h1>ERROR 404 NOT FOUND</h1>}/>
-          
-      </Routes>    
+      </Routes>
       </BrowserRouter>
-    </div>
   )
 }
 
