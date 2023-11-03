@@ -15,19 +15,19 @@ const NavBar = () =>{
             </div>
 
             <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-end buttons are-medium espacio">
-                <NavLink to={`category/2000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6"}>
+                <div className="navbar-end buttons are-medium">
+                <NavLink to={`category/2000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6 mt-2"}>
                     2000PFF
                 </NavLink>
-                <NavLink to={`category/5000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6 ml-6"}>
+                <NavLink to={`category/5000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6 ml-6 mt-2"}>
                     5000PFF
                 </NavLink>
-                <NavLink to={`category/7000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6 ml-6"}>
+                <NavLink to={`category/7000PFF`} className={({ isActive }) => (isActive ? "ActiveOption" : "Option") + "navbar-item is-tab button is-info has-text-black mr-6 ml-6 mt-2"}>
                     7000PFF
                 </NavLink>
-                <p className="navbar-item ml-6 mr-3">
+                <div className="navbar-item ml-6 mr-3">
                     <CartWidget/>
-                </p>
+                </div>
                 </div>
             </div>
             </nav>
